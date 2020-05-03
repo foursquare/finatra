@@ -12,7 +12,46 @@ on:
     branches: [ ccoco/WorkflowBuild ]
 
 jobs:
+  dodo-build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [openjdk@1.8]
+        scala: [2.11.12, 2.12.8, 2.13.1]
+    steps:
+      - uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - uses: olafurpg/setup-scala@v7
+        with:
+          java-version: ${{ matrix.java }}
+      - name: cache/maven
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: cache/ivy2-cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.ivy2/cache
+          key: ${{ runner.os }}-${{ github.repository }}-${{ github.ref }}-sbt-ivy-cache-
+      - name: cache/ivy2-local
+        uses: actions/cache@v1
+        with:
+          path: ~/.ivy2/local/com.twitter
+          key: ${{ runner.os }}-${{ github.repository }}-${{ github.ref }}-sbt-ivy-local-
+      - name: cache/dodo
+        uses: actions/cache@v1
+        with:
+          path: ~/.dodo
+          key: ${{ runner.os }}-${{ github.repository }}-${{ github.ref }}-dodo-
+      - name: dodo
+        run: |
+          curl -s https://raw.githubusercontent.com/twitter/dodo/develop/bin/build | bash -s -- --no-test --scala-version ${{ matrix.scala }} finatra
   test-with-coverage: # generate coverage report for 2.12.8 on jdk1.8
+    needs: dodo-build
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -34,27 +73,21 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: cache/ivy2
+      - name: cache/ivy2-cache
         uses: actions/cache@v1
         with:
           path: ~/.ivy2/cache
-          key: ${{ runner.os }}-${{ matrix.java }}-sbt-ivy-cache-${{ hashFiles('**/build.sbt') }}
+          key: ${{ runner.os }}-${{ github.repository }}-${{ github.ref }}-sbt-ivy-cache-
+      - name: cache/ivy2-local
+        uses: actions/cache@v1
+        with:
+          path: ~/.ivy2/local/com.twitter
+          key: ${{ runner.os }}-${{ github.repository }}-${{ github.ref }}-sbt-ivy-local-
       - name: cache/sbt
         uses: actions/cache@v1
         with:
           path: ~/.sbt
           key: ${{ runner.os }}-${{ matrix.java }}-sbt-${{ hashFiles('**/build.sbt') }}
-      - name: cache/dodo
-        uses: actions/cache@v1
-        with:
-          path: ~/.dodo
-          key: ${{ runner.os }}-$GITHUB_REPOSITORY-$GITHUB_REF-dodo
-      - name: unset/sbt-opts # default $SBT_OPTS is irrelevant to sbt launcher
-        run: |
-          unset SBT_OPTS
-      - name: dodo
-        run: |
-          curl -s https://raw.githubusercontent.com/twitter/dodo/develop/bin/build | bash -s -- --no-test --scala-version ${{ matrix.scala }} finatra
       - name: test
         if: ${{ matrix.java != 'openjdk@1.8' }}
         run: |
@@ -71,6 +104,7 @@ jobs:
         if: ${{ success() && matrix.java == 'openjdk@1.8' }}
         uses: codecov/codecov-action@v1
   test:
+    needs: dodo-build
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
     strategy:
@@ -101,27 +135,21 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: cache/ivy2
+      - name: cache/ivy2-cache
         uses: actions/cache@v1
         with:
           path: ~/.ivy2/cache
-          key: ${{ runner.os }}-${{ matrix.java }}-sbt-ivy-cache-${{ hashFiles('**/build.sbt') }}
+          key: ${{ runner.os }}-${{ github.repository }}-${{ github.ref }}-sbt-ivy-cache-
+      - name: cache/ivy2-local
+        uses: actions/cache@v1
+        with:
+          path: ~/.ivy2/local/com.twitter
+          key: ${{ runner.os }}-${{ github.repository }}-${{ github.ref }}-sbt-ivy-local-
       - name: cache/sbt
         uses: actions/cache@v1
         with:
           path: ~/.sbt
           key: ${{ runner.os }}-${{ matrix.java }}-sbt-${{ hashFiles('**/build.sbt') }}
-      - name: cache/dodo
-        uses: actions/cache@v1
-        with:
-          path: ~/.dodo
-          key: ${{ runner.os }}-$GITHUB_REPOSITORY-$GITHUB_REF-dodo
-      - name: unset/sbt-opts # default $SBT_OPTS is irrelevant to sbt launcher
-        run: |
-          unset SBT_OPTS
-      - name: dodo
-        run: |
-          curl -s https://raw.githubusercontent.com/twitter/dodo/develop/bin/build | bash -s -- --no-test --scala-version ${{ matrix.scala }} finatra
       - name: test
         run: |
           ./sbt ++${{ matrix.scala }} clean test
