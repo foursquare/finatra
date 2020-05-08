@@ -1,7 +1,7 @@
 package com.twitter.finatra.http.internal.marshalling
 
-import com.fasterxml.jackson.databind.`type`.SimpleType
-import com.fasterxml.jackson.databind.{
+import __foursquare_shaded__.com.fasterxml.jackson.databind.`type`.SimpleType
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{
   BeanProperty,
   DeserializationContext,
   InjectableValues,

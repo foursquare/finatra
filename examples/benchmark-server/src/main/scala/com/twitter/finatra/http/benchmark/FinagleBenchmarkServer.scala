@@ -1,7 +1,7 @@
 package com.twitter.finatra.http.benchmark
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.scala.DefaultScalaModule
+import __foursquare_shaded__.com.fasterxml.jackson.databind.ObjectMapper
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.twitter.finagle.http.{HttpMuxer, Request, Response}
 import com.twitter.finagle.stats.NullStatsReceiver
 import com.twitter.finagle.tracing.NullTracer

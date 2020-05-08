@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.modules
 
-import com.fasterxml.jackson.module.scala._
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala._
 import com.twitter.finatra.json.internal.caseclass.jackson.{CaseClassDeserializers, NullCaseClassValidationProvider}
 
 /**

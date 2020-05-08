@@ -1,10 +1,10 @@
 package com.twitter.finatra.json.tests.internal.caseclass.jackson
 
-import com.fasterxml.jackson.annotation.{JsonIgnore, JsonProperty}
-import com.fasterxml.jackson.databind.PropertyNamingStrategy
-import com.fasterxml.jackson.databind.`type`.TypeFactory
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize
-import com.fasterxml.jackson.databind.deser.std.NumberDeserializers.BigDecimalDeserializer
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.{JsonIgnore, JsonProperty}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.PropertyNamingStrategy
+import __foursquare_shaded__.com.fasterxml.jackson.databind.`type`.TypeFactory
+import __foursquare_shaded__.com.fasterxml.jackson.databind.annotation.JsonDeserialize
+import __foursquare_shaded__.com.fasterxml.jackson.databind.deser.std.NumberDeserializers.BigDecimalDeserializer
 import com.twitter.finatra.json.internal.caseclass.jackson.{CaseClassField, NullCaseClassValidationProvider}
 import com.twitter.finatra.json.tests.internal.{WithEmptyJsonProperty, WithNonemptyJsonProperty, WithoutJsonPropertyAnnotation}
 import com.twitter.finatra.request.{Header, QueryParam}

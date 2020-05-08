@@ -1,7 +1,7 @@
 package com.twitter.finatra.http.jsonpatch
 
-import com.fasterxml.jackson.core.JsonPointer
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonPointer
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 
 /**
  * Operations compose JSON Patch, apply to a target JSON document

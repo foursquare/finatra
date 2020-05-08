@@ -1,8 +1,8 @@
 package com.twitter.finatra.json.internal.streaming
 
-import com.fasterxml.jackson.core.async.ByteArrayFeeder
-import com.fasterxml.jackson.core.json.async.NonBlockingJsonParser
-import com.fasterxml.jackson.core.{JsonFactory, JsonParser, JsonToken}
+import __foursquare_shaded__.com.fasterxml.jackson.core.async.ByteArrayFeeder
+import __foursquare_shaded__.com.fasterxml.jackson.core.json.async.NonBlockingJsonParser
+import __foursquare_shaded__.com.fasterxml.jackson.core.{JsonFactory, JsonParser, JsonToken}
 import com.twitter.io.Buf
 import java.nio.ByteBuffer
 import scala.collection.mutable.ListBuffer

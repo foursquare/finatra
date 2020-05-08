@@ -1,6 +1,6 @@
 package com.twitter.inject
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.twitter.util.{Future, Return, Stopwatch, Throw}
 import scala.util.control.NonFatal
 

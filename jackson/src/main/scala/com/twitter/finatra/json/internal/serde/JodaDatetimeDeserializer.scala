@@ -1,9 +1,9 @@
 package com.twitter.finatra.json.internal.serde
 
-import com.fasterxml.jackson.core.{JsonParser, JsonToken}
-import com.fasterxml.jackson.databind.DeserializationContext
-import com.fasterxml.jackson.datatype.joda.cfg.JacksonJodaDateFormat
-import com.fasterxml.jackson.datatype.joda.deser.JodaDateDeserializerBase
+import __foursquare_shaded__.com.fasterxml.jackson.core.{JsonParser, JsonToken}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.DeserializationContext
+import __foursquare_shaded__.com.fasterxml.jackson.datatype.joda.cfg.JacksonJodaDateFormat
+import __foursquare_shaded__.com.fasterxml.jackson.datatype.joda.deser.JodaDateDeserializerBase
 import com.twitter.finatra.json.internal.caseclass.exceptions.FinatraJsonMappingException
 import com.twitter.util.{Return, Try}
 import org.joda.time.{DateTime, DateTimeZone}

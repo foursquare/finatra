@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.internal.caseclass.exceptions
 
-import com.fasterxml.jackson.databind.JsonMappingException
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonMappingException
 
 case class CaseClassMappingException(
   validationExceptions: Set[CaseClassValidationException] = Set()

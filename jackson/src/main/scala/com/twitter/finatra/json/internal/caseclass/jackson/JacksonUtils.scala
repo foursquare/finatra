@@ -1,7 +1,7 @@
 package com.twitter.finatra.json.internal.caseclass.jackson
 
-import com.fasterxml.jackson.core.JsonProcessingException
-import com.fasterxml.jackson.databind.JsonMappingException
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonProcessingException
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonMappingException
 import com.twitter.finatra.json.internal.caseclass.exceptions.FinatraJsonMappingException
 import com.twitter.inject.Logging
 

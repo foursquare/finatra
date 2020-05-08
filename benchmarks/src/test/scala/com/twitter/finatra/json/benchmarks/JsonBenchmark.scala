@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.benchmarks
 
-import com.fasterxml.jackson.module.scala.JacksonModule
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.JacksonModule
 import com.twitter.finatra.StdBenchAnnotations
 import com.twitter.finatra.benchmarks.domain.{TestDemographic, TestFormat}
 import com.twitter.finatra.json.FinatraObjectMapper

@@ -1,8 +1,8 @@
 package com.twitter.finatra.json.tests.internal.caseclass.jackson
 
-import com.fasterxml.jackson.annotation.{JsonIgnore, JsonProperty}
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize
-import com.fasterxml.jackson.databind.deser.std.NumberDeserializers.BigDecimalDeserializer
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.{JsonIgnore, JsonProperty}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.annotation.JsonDeserialize
+import __foursquare_shaded__.com.fasterxml.jackson.databind.deser.std.NumberDeserializers.BigDecimalDeserializer
 import com.twitter.finatra.request.{Header, QueryParam}
 import com.twitter.finatra.response.JsonCamelCase
 import com.twitter.finatra.validation.NotEmpty

@@ -1,8 +1,8 @@
 package com.twitter.finatra.json.tests.internal
 
-import com.fasterxml.jackson.annotation.JsonFormat
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.scala.DefaultScalaModule
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.JsonFormat
+import __foursquare_shaded__.com.fasterxml.jackson.databind.ObjectMapper
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.twitter.finatra.json.internal.serde.SerDeSimpleModule
 import com.twitter.inject.Test
 import com.twitter.util.{Time, TimeFormat}

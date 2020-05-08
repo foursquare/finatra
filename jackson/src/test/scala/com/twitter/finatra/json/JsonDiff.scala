@@ -1,6 +1,6 @@
 package com.twitter.finatra.json
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.twitter.finatra.json.utils.{JsonDiffResult, JsonDiffUtil}
 import org.scalatest.exceptions.TestFailedException
 

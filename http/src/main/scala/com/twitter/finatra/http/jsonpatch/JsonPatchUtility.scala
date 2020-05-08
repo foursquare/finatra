@@ -1,6 +1,6 @@
 package com.twitter.finatra.http.jsonpatch
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 
 /**
  * Apply each JSON Patch operation to target JSON document

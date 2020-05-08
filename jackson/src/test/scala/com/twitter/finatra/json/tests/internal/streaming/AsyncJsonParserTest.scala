@@ -1,7 +1,7 @@
 package com.twitter.finatra.json.tests.internal.streaming
 
-import com.fasterxml.jackson.core.JsonParseException
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonParseException
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.twitter.finatra.json.{FinatraObjectMapper, JsonDiff}
 import com.twitter.finatra.json.internal.streaming.AsyncJsonParser
 import com.twitter.inject.Test

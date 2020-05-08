@@ -1,8 +1,8 @@
 package com.twitter.finatra.http.jsonpatch
 
-import com.fasterxml.jackson.core.JsonPointer
-import com.fasterxml.jackson.databind.JsonNode
-import com.fasterxml.jackson.databind.node.{ArrayNode, ObjectNode}
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonPointer
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.node.{ArrayNode, ObjectNode}
 import com.twitter.finatra.json.FinatraObjectMapper
 import scala.annotation.tailrec
 import javax.inject.{Inject, Singleton}

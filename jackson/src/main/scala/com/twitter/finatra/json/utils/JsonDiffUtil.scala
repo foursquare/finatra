@@ -1,7 +1,7 @@
 package com.twitter.finatra.json.utils
 
-import com.fasterxml.jackson.databind.node.TextNode
-import com.fasterxml.jackson.databind.{JsonNode, ObjectMapperCopier, SerializationFeature}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.node.TextNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{JsonNode, ObjectMapperCopier, SerializationFeature}
 import com.twitter.finatra.json.FinatraObjectMapper
 import com.twitter.inject.Logging
 import com.twitter.inject.conversions.boolean._

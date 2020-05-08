@@ -1,6 +1,6 @@
 package com.twitter.finatra.httpclient
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.google.inject.Provides
 import com.twitter.finagle.Service
 import com.twitter.finagle.http.{Request, Response, Status}

@@ -1,7 +1,7 @@
 package com.twitter.finatra.json.internal.serde
 
-import com.fasterxml.jackson.core.JsonParser
-import com.fasterxml.jackson.databind.{DeserializationContext, JsonDeserializer}
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonParser
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{DeserializationContext, JsonDeserializer}
 import com.twitter.finatra.json.internal.caseclass.exceptions.FinatraJsonMappingException
 import com.twitter.util.Duration
 

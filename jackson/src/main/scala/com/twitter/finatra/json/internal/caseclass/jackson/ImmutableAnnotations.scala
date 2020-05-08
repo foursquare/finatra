@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.internal.caseclass.jackson
 
-import com.fasterxml.jackson.databind.util.Annotations
+import __foursquare_shaded__.com.fasterxml.jackson.databind.util.Annotations
 import com.twitter.inject.conversions.seq._
 import java.lang.annotation.Annotation
 

@@ -1,6 +1,6 @@
 package com.twitter.finatra.http.tests.integration.doeverything.test
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.google.inject.name.Names
 import com.google.inject.{Key, TypeLiteral}
 import com.twitter.finagle.http.Method._
