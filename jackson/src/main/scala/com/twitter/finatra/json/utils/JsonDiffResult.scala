@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.utils
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.twitter.finatra.json.FinatraObjectMapper
 
 object JsonDiffResult {

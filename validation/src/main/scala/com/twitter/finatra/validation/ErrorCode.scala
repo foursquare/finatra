@@ -1,6 +1,6 @@
 package com.twitter.finatra.validation
 
-import com.fasterxml.jackson.core.JsonProcessingException
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonProcessingException
 import java.util.concurrent.TimeUnit
 import org.joda.time.DateTime
 

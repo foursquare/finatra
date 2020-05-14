@@ -1,10 +1,10 @@
 package com.twitter.finatra.json.tests.internal
 
-import com.fasterxml.jackson.annotation.{JsonIgnore, JsonIgnoreProperties, JsonProperty, JsonValue}
-import com.fasterxml.jackson.core.JsonParser
-import com.fasterxml.jackson.databind._
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize
-import com.fasterxml.jackson.databind.node.ValueNode
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.{JsonIgnore, JsonIgnoreProperties, JsonProperty, JsonValue}
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonParser
+import __foursquare_shaded__.com.fasterxml.jackson.databind._
+import __foursquare_shaded__.com.fasterxml.jackson.databind.annotation.JsonDeserialize
+import __foursquare_shaded__.com.fasterxml.jackson.databind.node.ValueNode
 import com.twitter.finatra.request._
 import com.twitter.finatra.response.JsonCamelCase
 import com.twitter.finatra.validation.ValidationResult

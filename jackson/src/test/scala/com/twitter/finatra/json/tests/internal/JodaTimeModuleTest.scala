@@ -1,9 +1,9 @@
 package com.twitter.finatra.json.tests.internal
 
-import com.fasterxml.jackson.databind.{ObjectMapper, SerializationFeature}
-import com.fasterxml.jackson.datatype.joda.JodaModule
-import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{ObjectMapper, SerializationFeature}
+import __foursquare_shaded__.com.fasterxml.jackson.datatype.joda.JodaModule
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.DefaultScalaModule
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import com.twitter.finatra.json.FinatraObjectMapper
 import com.twitter.finatra.json.internal.serde.SerDeSimpleModule
 import com.twitter.inject.Test

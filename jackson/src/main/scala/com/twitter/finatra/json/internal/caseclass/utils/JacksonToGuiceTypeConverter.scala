@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.internal.caseclass.utils
 
-import com.fasterxml.jackson.databind.JavaType
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JavaType
 import com.google.inject.util.Types
 import java.lang.reflect.Type
 

@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.internal.caseclass.jackson
 
-import com.fasterxml.jackson.module.scala._
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala._
 
 private[finatra] object CaseClassModule extends JacksonModule {
   override def getModuleName: String = getClass.getName

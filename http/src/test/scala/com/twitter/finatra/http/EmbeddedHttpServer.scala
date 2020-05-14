@@ -1,6 +1,6 @@
 package com.twitter.finatra.http
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.google.inject.Stage
 import com.twitter.app.GlobalFlag
 import com.twitter.finagle.http.{MediaType, Method, Status, _}

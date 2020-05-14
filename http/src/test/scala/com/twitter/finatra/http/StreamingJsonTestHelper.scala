@@ -1,6 +1,6 @@
 package com.twitter.finatra.http
 
-import com.fasterxml.jackson.databind.ObjectWriter
+import __foursquare_shaded__.com.fasterxml.jackson.databind.ObjectWriter
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.json.FinatraObjectMapper
 import com.twitter.io.Buf

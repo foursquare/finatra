@@ -1,6 +1,6 @@
 package com.twitter.finatra.http.tests.marshalling
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.twitter.finagle.http.{Fields, MediaType, Message, Request, Response}
 import com.twitter.finatra.http.TestMessageBodyWriterAnn
 import com.twitter.finatra.http.marshalling.{DefaultMessageBodyReader, DefaultMessageBodyWriter, MessageBodyComponent, MessageBodyManager, MessageBodyReader, MessageBodyWriter, WriterResponse}

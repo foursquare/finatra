@@ -1,12 +1,12 @@
 package com.twitter.finatra.json.internal.caseclass.jackson
 
-import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.core.ObjectCodec
-import com.fasterxml.jackson.databind._
-import com.fasterxml.jackson.databind.`type`.TypeFactory
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize
-import com.fasterxml.jackson.databind.node.TreeTraversingParser
-import com.fasterxml.jackson.databind.util.ClassUtil
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.JsonProperty
+import __foursquare_shaded__.com.fasterxml.jackson.core.ObjectCodec
+import __foursquare_shaded__.com.fasterxml.jackson.databind._
+import __foursquare_shaded__.com.fasterxml.jackson.databind.`type`.TypeFactory
+import __foursquare_shaded__.com.fasterxml.jackson.databind.annotation.JsonDeserialize
+import __foursquare_shaded__.com.fasterxml.jackson.databind.node.TreeTraversingParser
+import __foursquare_shaded__.com.fasterxml.jackson.databind.util.ClassUtil
 import com.twitter.finatra.json.internal.caseclass.exceptions.{CaseClassValidationException, FinatraJsonMappingException}
 import com.twitter.finatra.json.internal.caseclass.utils.{DefaultMethodUtils, FieldInjection}
 import com.twitter.finatra.request.{FormParam, Header, QueryParam}

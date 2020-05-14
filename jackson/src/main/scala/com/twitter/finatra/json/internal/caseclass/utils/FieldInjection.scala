@@ -1,9 +1,9 @@
 package com.twitter.finatra.json.internal.caseclass.utils
 
-import com.fasterxml.jackson.core.ObjectCodec
-import com.fasterxml.jackson.databind.deser.impl.ValueInjector
-import com.fasterxml.jackson.databind.exc.InvalidDefinitionException
-import com.fasterxml.jackson.databind.{DeserializationContext, JavaType, PropertyName}
+import __foursquare_shaded__.com.fasterxml.jackson.core.ObjectCodec
+import __foursquare_shaded__.com.fasterxml.jackson.databind.deser.impl.ValueInjector
+import __foursquare_shaded__.com.fasterxml.jackson.databind.exc.InvalidDefinitionException
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{DeserializationContext, JavaType, PropertyName}
 import com.google.inject.{BindingAnnotation, ConfigurationException, Key}
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.json.internal.caseclass.exceptions.{JsonInjectException, JsonInjectionNotSupportedException}

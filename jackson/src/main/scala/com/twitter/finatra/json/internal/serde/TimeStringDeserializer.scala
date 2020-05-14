@@ -1,9 +1,9 @@
 package com.twitter.finatra.json.internal.serde
 
-import com.fasterxml.jackson.core.JsonParser
-import com.fasterxml.jackson.databind.deser.ContextualDeserializer
-import com.fasterxml.jackson.databind.deser.std.StdScalarDeserializer
-import com.fasterxml.jackson.databind.{BeanProperty, DeserializationContext, JsonDeserializer}
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonParser
+import __foursquare_shaded__.com.fasterxml.jackson.databind.deser.ContextualDeserializer
+import __foursquare_shaded__.com.fasterxml.jackson.databind.deser.std.StdScalarDeserializer
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{BeanProperty, DeserializationContext, JsonDeserializer}
 import com.twitter.util.{Time, TimeFormat}
 import java.util.{Locale, TimeZone}
 

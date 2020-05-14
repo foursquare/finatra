@@ -1,7 +1,7 @@
 package com.twitter.finatra.json.internal.caseclass.jackson
 
-import com.fasterxml.jackson.databind.JavaType
-import com.fasterxml.jackson.databind.`type`.{ArrayType, TypeBindings, TypeFactory}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JavaType
+import __foursquare_shaded__.com.fasterxml.jackson.databind.`type`.{ArrayType, TypeBindings, TypeFactory}
 
 private[json] object JacksonTypes {
 

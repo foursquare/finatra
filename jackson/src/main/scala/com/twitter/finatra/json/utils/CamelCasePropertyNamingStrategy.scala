@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.utils
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategy
+import __foursquare_shaded__.com.fasterxml.jackson.databind.PropertyNamingStrategy
 
 /* By default PropertyNamingStrategy uses CamelCase */
 @deprecated(

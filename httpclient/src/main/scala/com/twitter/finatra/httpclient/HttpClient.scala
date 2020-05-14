@@ -1,6 +1,6 @@
 package com.twitter.finatra.httpclient
 
-import com.fasterxml.jackson.databind.ObjectReader
+import __foursquare_shaded__.com.fasterxml.jackson.databind.ObjectReader
 import com.twitter.finagle.Service
 import com.twitter.finagle.http.{Message, Request, Response, Status}
 import com.twitter.finagle.service.RetryPolicy

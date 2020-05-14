@@ -1,9 +1,9 @@
 package com.twitter.finatra.json
 
-import com.fasterxml.jackson.core.JsonParser
-import com.fasterxml.jackson.databind._
-import com.fasterxml.jackson.databind.util.ByteBufferBackedInputStream
-import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonParser
+import __foursquare_shaded__.com.fasterxml.jackson.databind._
+import __foursquare_shaded__.com.fasterxml.jackson.databind.util.ByteBufferBackedInputStream
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import com.google.inject.Injector
 import com.twitter.finatra.json.internal.serde.ArrayElementsOnNewLinesPrettyPrinter
 import com.twitter.finatra.json.modules.FinatraJacksonModule

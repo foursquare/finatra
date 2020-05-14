@@ -1,6 +1,6 @@
 package com.twitter.streaming
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.twitter.conversions.DurationOps._
 import com.twitter.finagle.http.{Request, Response, Status}
 import com.twitter.finatra.http.{EmbeddedHttpServer, StreamingJsonTestHelper}

@@ -1,8 +1,8 @@
 package com.twitter.finatra.json.internal.serde
 
-import com.fasterxml.jackson.databind._
-import com.fasterxml.jackson.databind.deser.KeyDeserializers
-import com.fasterxml.jackson.module.scala.JacksonModule
+import __foursquare_shaded__.com.fasterxml.jackson.databind._
+import __foursquare_shaded__.com.fasterxml.jackson.databind.deser.KeyDeserializers
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.JacksonModule
 import com.twitter.inject.domain.WrappedValue
 import org.json4s.reflect.{classDescribable, ClassDescriptor, Reflector}
 

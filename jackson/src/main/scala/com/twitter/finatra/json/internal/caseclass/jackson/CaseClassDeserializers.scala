@@ -1,7 +1,7 @@
 package com.twitter.finatra.json.internal.caseclass.jackson
 
-import com.fasterxml.jackson.databind.deser.Deserializers
-import com.fasterxml.jackson.databind.{BeanDescription, DeserializationConfig, JavaType}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.deser.Deserializers
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{BeanDescription, DeserializationConfig, JavaType}
 import com.twitter.finatra.validation.{CaseClassValidationProvider, ValidationProvider}
 
 private object CaseClassDeserializers {

@@ -1,7 +1,7 @@
 package com.twitter.finatra.json.internal.serde
 
-import com.fasterxml.jackson.databind.module.SimpleModule
-import com.fasterxml.jackson.datatype.joda.cfg.FormatConfig
+import __foursquare_shaded__.com.fasterxml.jackson.databind.module.SimpleModule
+import __foursquare_shaded__.com.fasterxml.jackson.datatype.joda.cfg.FormatConfig
 import com.twitter.finatra.json.internal.caseclass.wrapped.WrappedValueSerializer
 import com.twitter.{util => ctu}
 import org.joda.time.DateTime

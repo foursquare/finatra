@@ -1,6 +1,6 @@
 package com.twitter.finatra.http.internal.marshalling
 
-import com.fasterxml.jackson.databind.node.ObjectNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.node.ObjectNode
 import com.google.inject.Injector
 import com.twitter.finagle.http.{MediaType, Message, Request}
 import com.twitter.finatra.http.marshalling.{DefaultMessageBodyReader, MessageBodyReader}

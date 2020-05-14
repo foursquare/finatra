@@ -1,12 +1,12 @@
 package com.twitter.finatra.json.modules
 
-import com.fasterxml.jackson.annotation.JsonInclude
-import com.fasterxml.jackson.annotation.JsonInclude.Include
-import com.fasterxml.jackson.core.JsonGenerator.Feature
-import com.fasterxml.jackson.databind.{Module => JacksonModule, _}
-import com.fasterxml.jackson.datatype.joda.JodaModule
-import com.fasterxml.jackson.module.scala._
-import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.JsonInclude
+import __foursquare_shaded__.com.fasterxml.jackson.annotation.JsonInclude.Include
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonGenerator.Feature
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{Module => JacksonModule, _}
+import __foursquare_shaded__.com.fasterxml.jackson.datatype.joda.JodaModule
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala._
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import com.google.inject.{Injector, Provides}
 import com.twitter.finatra.annotations.{CamelCaseMapper, SnakeCaseMapper}
 import com.twitter.finatra.json.FinatraObjectMapper

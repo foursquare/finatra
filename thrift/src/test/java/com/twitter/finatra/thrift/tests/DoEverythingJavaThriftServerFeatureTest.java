@@ -5,8 +5,8 @@ import java.util.Map;
 
 import scala.reflect.ClassTag$;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode;
+import __foursquare_shaded__.com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Stage;
 
 import org.apache.thrift.TApplicationException;

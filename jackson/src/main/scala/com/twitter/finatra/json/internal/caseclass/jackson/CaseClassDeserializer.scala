@@ -1,13 +1,13 @@
 package com.twitter.finatra.json.internal.caseclass.jackson
 
-import com.fasterxml.jackson.core.{
+import __foursquare_shaded__.com.fasterxml.jackson.core.{
   JsonParseException,
   JsonParser,
   JsonProcessingException,
   JsonToken
 }
-import com.fasterxml.jackson.databind._
-import com.fasterxml.jackson.databind.exc.{InvalidFormatException, MismatchedInputException}
+import __foursquare_shaded__.com.fasterxml.jackson.databind._
+import __foursquare_shaded__.com.fasterxml.jackson.databind.exc.{InvalidFormatException, MismatchedInputException}
 import com.twitter.finatra.json.internal.caseclass.exceptions.CaseClassValidationException.PropertyPath
 import com.twitter.finatra.json.internal.caseclass.exceptions._
 import com.twitter.finatra.response.JsonCamelCase

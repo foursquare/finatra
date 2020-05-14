@@ -1,6 +1,6 @@
 package com.twitter.finatra.http.marshalling
 
-import com.fasterxml.jackson.databind.ObjectReader
+import __foursquare_shaded__.com.fasterxml.jackson.databind.ObjectReader
 import com.twitter.finagle.http.Message
 
 object MessageBodyReader {

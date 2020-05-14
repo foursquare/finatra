@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.tests
 
-import com.fasterxml.jackson.databind.JsonNode
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonNode
 import com.twitter.finatra.json.FinatraObjectMapper
 import com.twitter.finatra.json.JsonDiff._
 import com.twitter.finatra.json.utils.JsonDiffUtil

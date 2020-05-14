@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.internal.caseclass.exceptions
 
-import com.fasterxml.jackson.databind.JsonMappingException
+import __foursquare_shaded__.com.fasterxml.jackson.databind.JsonMappingException
 
 /**
  * Exception for handling Finatra-specific errors that may otherwise be valid

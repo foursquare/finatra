@@ -1,15 +1,15 @@
 package com.twitter.finatra.json.tests
 
-import com.fasterxml.jackson.core.`type`.TypeReference
-import com.fasterxml.jackson.databind.node.{IntNode, TreeTraversingParser}
-import com.fasterxml.jackson.databind.{
+import __foursquare_shaded__.com.fasterxml.jackson.core.`type`.TypeReference
+import __foursquare_shaded__.com.fasterxml.jackson.databind.node.{IntNode, TreeTraversingParser}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{
   JsonMappingException,
   JsonNode,
   ObjectMapper,
   PropertyNamingStrategy
 }
-import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.DefaultScalaModule
+import __foursquare_shaded__.com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import com.twitter.finagle.http.{Request, Response}
 import com.twitter.finatra.annotations.{CamelCaseMapper, SnakeCaseMapper}
 import com.twitter.finatra.json.internal.caseclass.exceptions.{CaseClassMappingException, CaseClassValidationException, JsonInjectionNotSupportedException, RequestFieldInjectionNotSupportedException}

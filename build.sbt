@@ -7,11 +7,20 @@ concurrentRestrictions in Global += Tags.limit(Tags.Test, 1)
 val releaseVersion = "20.1.0"
 
 lazy val buildSettings = Seq(
-  version := releaseVersion,
-  scalaVersion := "2.12.8",
+  version := releaseVersion + "-fs0",
+  scalaVersion := "2.11.12",
   crossScalaVersions := Seq("2.11.12", "2.12.8"),
   scalaModuleInfo := scalaModuleInfo.value.map(_.withOverrideScalaVersion(true)),
-  fork in Test := true, // We have to fork to get the JavaOptions
+  // NOTE(jacob): Something about forking the jvm process for test running that breaks
+  //    classloading for our shaded jackson? I am pretty unclear as to why, and there are
+  //    some other tests (notably com.twitter.finatra.http.tests.request.RequestUtilsTest)
+  //    that break even with unshaded jackson when we DON'T fork. As much as I'd like to
+  //    have a better idea what exactly sbt is doing under the hood to cause this I'm
+  //    comfortable ignoring the problem for our purposes.
+  //
+  // NOTE(jacob): To run with these options anyway, export them when invoking sbt, eg.
+  //    JAVA_OPTS=-DSKIP_FLAKY=true ./sbt
+  // fork in Test := true, // We have to fork to get the JavaOptions
   javaOptions in Test ++= travisTestJavaOptions
 )
 
@@ -95,8 +104,8 @@ lazy val versions = new {
   val commonsFileupload = "1.4"
   val fastutil = "8.1.1"
   val guice = "4.1.0"
-  val jackson = "2.9.10"
-  val jacksonDatabind = "2.9.10.1"
+  val jackson = "2.6.7"
+  val jacksonDatabind = "2.6.7.1"
   val jodaConvert = "1.2"
   val jodaTime = "2.5"
   val json4s = "3.6.7"
@@ -141,6 +150,39 @@ lazy val baseSettings = Seq(
     "org.specs2" %% "specs2-junit" % versions.specs2 % Test,
     "org.specs2" %% "specs2-mock" % versions.specs2 % Test
   ),
+  // NOTE(jacob): Force upstream jackson to our older version, otherwise coursier will
+  //    happily pull in the newer versions specified by finagle and twitter-util.
+  dependencyOverrides ++= Seq(
+    "com.fasterxml.jackson.core" % "jackson-annotations" % versions.jackson,
+    "com.fasterxml.jackson.core" % "jackson-core" % versions.jackson,
+    "com.fasterxml.jackson.core" % "jackson-databind" % versions.jacksonDatabind,
+    "com.fasterxml.jackson.datatype" % "jackson-datatype-joda" % versions.jackson,
+    "com.fasterxml.jackson.module" %% "jackson-module-paranamer" % versions.jackson,
+    "com.fasterxml.jackson.module" %% "jackson-module-scala" % versions.jacksonDatabind
+  ),
+  // NOTE(jacob): Our patched finatra itself requires a newer jackson, but the finagle
+  //    and twitter-util codebases underneath it are happy with our older version (2.6.7).
+  //    Since we DON'T publish and consume shaded versions of them, they still need access
+  //    to the upstream jackson classes at runtime, and we want to test them against the
+  //    older version anyway. These exclusion rules therefore need to be commented out
+  //    when running tests. However, we still want them in place when compiling any
+  //    new changes -- finatra itself should only be depending on shaded jackson and the
+  //    safest way to ensure that is banning unshaded jackson from the classpath -- so
+  //    they are left in place here.
+  excludeDependencies ++= Seq(
+    // provided by shaded jackson fat jar
+    ExclusionRule("com.fasterxml.jackson.core", "jackson-annotations"),
+    ExclusionRule("com.fasterxml.jackson.core", "jackson-core"),
+    ExclusionRule("com.fasterxml.jackson.core", "jackson-databind"),
+    ExclusionRule("com.fasterxml.jackson.datatype", "jackson-datatype-joda"),
+    ExclusionRule("com.fasterxml.jackson.module", "jackson-module-paranamer"),
+    ExclusionRule("com.fasterxml.jackson.module", "jackson-module-scala"),
+    ExclusionRule("com.fasterxml.jackson.module", "jackson-module-scala_2.11"),
+    ExclusionRule("com.fasterxml.jackson.module", "jackson-module-scala_2.12")
+  ),
+  // NOTE(jacob): If re-patching, you will need to drop copies of our shaded jackson jars
+  //    into the repo's top-level 'lib' directory for sbt to find them.
+  unmanagedBase := file("lib"),
   resolvers ++= Seq(
     Resolver.sonatypeRepo("releases"),
     Resolver.sonatypeRepo("snapshots")
@@ -1091,7 +1133,7 @@ lazy val kafkaStreamsQueryableThrift = (project in file("kafka-streams/kafka-str
       "org.slf4j" % "slf4j-simple" % versions.slf4j % "test-internal"
     )
   ).dependsOn(
-    injectCore % "test->test;compile->compile", 
+    injectCore % "test->test;compile->compile",
     kafkaStreamsStaticPartitioning % "test->test;compile->compile")
 
 lazy val kafkaStreams = (project in file("kafka-streams/kafka-streams"))

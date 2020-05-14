@@ -1,6 +1,6 @@
 package com.twitter.finatra.json.internal.caseclass.guice
 
-import com.fasterxml.jackson.databind.{BeanProperty, DeserializationContext, InjectableValues}
+import __foursquare_shaded__.com.fasterxml.jackson.databind.{BeanProperty, DeserializationContext, InjectableValues}
 import com.google.inject.{Injector, Key}
 
 private[json] class GuiceInjectableValues(injector: Injector) extends InjectableValues {

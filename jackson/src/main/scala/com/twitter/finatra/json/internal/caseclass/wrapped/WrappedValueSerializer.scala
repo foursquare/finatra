@@ -1,8 +1,8 @@
 package com.twitter.finatra.json.internal.caseclass.wrapped
 
-import com.fasterxml.jackson.core.JsonGenerator
-import com.fasterxml.jackson.databind.SerializerProvider
-import com.fasterxml.jackson.databind.ser.std.StdSerializer
+import __foursquare_shaded__.com.fasterxml.jackson.core.JsonGenerator
+import __foursquare_shaded__.com.fasterxml.jackson.databind.SerializerProvider
+import __foursquare_shaded__.com.fasterxml.jackson.databind.ser.std.StdSerializer
 import com.twitter.inject.domain.WrappedValue
 
 private[finatra] object WrappedValueSerializer
